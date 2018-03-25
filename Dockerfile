@@ -1,6 +1,6 @@
 FROM alpine
 
-LABEL maintainer="Lachlan Evenson <lachlan.evenson@gmail.com>"
+LABEL maintainer="Magne Skjeret <magne.skjeret@gmail.com>"
 
 ARG VCS_REF
 ARG BUILD_DATE
@@ -21,5 +21,4 @@ RUN apk add --update ca-certificates \
  && rm /var/cache/apk/*
 
 WORKDIR /root
-ENTRYPOINT ["kubectl"]
-CMD ["help"]
+CMD ["kubectl"]
